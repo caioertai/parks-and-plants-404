@@ -1,16 +1,19 @@
-my_garden = Garden.new(
+my_garden = Garden.create!(
   name: "My Garden",
-  banner_url: "http://placehold.it/1200x400?text=My%20Garden"
+  banner_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/garden_1.jpg"
 )
 
-my_garden.save! # <<<<< !
+my_other_garden = Garden.create!(
+  name: "My Other Garden",
+  banner_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/garden_2.jpg"
+)
 
 my_garden.plants << Plant.new(
-  name: "Monterra",
-  image_url: "http://placehold.it/400x200?text=Monterra"
+  name: "Montera",
+  image_url: "https://loremflickr.com/400/200/monstera"
 )
 
 my_garden.plants << Plant.new(
   name: "Orchid",
-  image_url: "http://placehold.it/400x200?text=Orchid"
+  image_url: "https://loremflickr.com/400/200/orchid"
 )
