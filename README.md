@@ -24,9 +24,9 @@ Running the app:
 ### User Stories
 
 ```
-As a user I can see one garden's plants
-As a user I can add a plant in a garden
-As a user I can delete a plant
+- [x] As a user I can see one garden's plants (GET /gardens/1)
+- [x] As a user I can add a plant in a garden (GET /gardens/1/plants/new)
+- [ ] As a user I can delete a plant (DELETE /plant/2)
 ```
 
 ### Front End Setup Guidelines
