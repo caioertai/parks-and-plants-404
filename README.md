@@ -26,7 +26,9 @@ Running the app:
 ```
 - [x] As a user I can see one garden's plants (GET /gardens/1)
 - [x] As a user I can add a plant in a garden (GET /gardens/1/plants/new)
-- [ ] As a user I can delete a plant (DELETE /plant/2)
+- [x] As a user I can delete a plant (DELETE /plant/2
+- [ ] As a user I can see plants tags
+- [ ] As a user I can tag plants
 ```
 
 ### Front End Setup Guidelines
@@ -36,3 +38,14 @@ https://github.com/lewagon/rails-stylesheets/blob/master/README.md
 ### Le Wagon UI Toolkit
 
 https://uikit.lewagon.com/
+
+### Tag seeds
+```ruby
+Tag.destroy_all if Rails.env.development?
+
+names = %w(Fruit\ tree Cactus Greasy\ plant Flower Ferns Conifers)
+
+names.each do |name|
+  Tag.create!(name: name)
+end
+```
