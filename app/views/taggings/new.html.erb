@@ -1,7 +1,2 @@
 <h1>Add tag to <%= @plant.name %></h1>
-<%= simple_form_for [@plant, @tagging] do |f| %>
-  <!-- Tag.all - @plant.tags <---- not a great query... but works -->
-  <%= f.association :tag, collection: Tag.all - @plant.tags %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
-
+<%= render "taggings/form", plant: @plant, tagging: @tagging %>
