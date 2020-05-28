@@ -27,8 +27,8 @@ Running the app:
 - [x] As a user I can see one garden's plants
 - [x] As a user I can add a plant in a garden
 - [x] As a user I can delete a plant
-- [ ] As a user I can see plants tags
-- [ ] As a user I can tag plants
+- [x] As a user I can see plants tags
+- [x] As a user I can tag plants (GET /plants/:plant_id/taggings/new)
 ```
 
 ### Front End Setup Guidelines
@@ -41,8 +41,6 @@ https://uikit.lewagon.com/
 
 ### Tag seeds
 ```ruby
-Tag.destroy_all if Rails.env.development?
-
 names = %w(Fruit\ tree Cactus Greasy\ plant Flower Ferns Conifers)
 
 names.each do |name|

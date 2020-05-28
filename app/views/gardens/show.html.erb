@@ -9,13 +9,7 @@
   <div class="row">
     <% @garden.plants.each do |plant| %>
       <div class="col-4">
-        <div class="card">
-          <%= image_tag plant.image_url, alt: plant.name, class: "card-img-top" %>
-          <div class="card-body">
-            <h5 class="card-title"><%= plant.name %></h5>
-            <%= link_to "Delete", plant_path(plant), method: :delete %>
-          </div>
-        </div>
+        <%= render "plants/card", plant: plant %>
       </div>
     <% end %>
     <div class="col-4">
@@ -25,8 +19,6 @@
           <%= link_to "Add plant", new_garden_plant_path(@garden) %>
         </div>
       </div>
-
-
     </div>
   </div>
 </div>

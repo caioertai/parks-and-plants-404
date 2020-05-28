@@ -3,5 +3,8 @@ Rails.application.routes.draw do
     resources :plants, only: [:new, :create]
   end
 
-  resources :plants, only: :destroy
+  resources :plants, only: :destroy do
+    # GET /plants/:plant_id/taggings/new
+    resources :taggings, only: [:new, :create]
+  end
 end

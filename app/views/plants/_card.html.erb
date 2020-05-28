@@ -1,0 +1,17 @@
+<div class="card">
+  <%= image_tag plant.image_url, alt: plant.name, class: "card-img-top" %>
+  <div class="card-body">
+    <h5 class="card-title"><%= plant.name %></h5>
+    <!-- plant => plant instance -->
+    <p>
+      <% plant.tags.each do |tag| %>
+        <span class="badge badge-primary"><%= tag.name %></span>
+      <% end %>
+
+      <%= link_to new_plant_tagging_path(plant) do %>
+        <span class="badge badge-warning">+</span>
+      <% end %>
+    </p>
+    <%= link_to "Delete", plant_path(plant), method: :delete %>
+  </div>
+</div>
